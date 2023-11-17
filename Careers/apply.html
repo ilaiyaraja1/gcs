@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Gcs Careers</title>
+    <link rel="icon" type="image/x-icon" href="logo3.png">
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+  </head>
+  <body>
+
+<div class="head">
+<img src="logo3.png" height="50px;" width="50px"/>
+<h1 class="ti">Gcs Careers Regestration</h1>
+</div>
+
+
+    <section class="container">
+      <div class="wrapper">
+        <form action="#">
+          <input class="file-input" type="file" name="file" hidden>
+          <i class="fas fa-cloud-upload-alt"></i>
+          <p>Upload your resume or drag and drop it here
+            Only .doc, .docx, .pdf, .odt, .rtf</p>
+        </form>
+        <section class="progress-area"></section>
+        <section class="uploaded-area"></section>
+      </div>
+      
+      <script src="script.js">
+        const form = document.querySelector("form"),
+fileInput = document.querySelector(".file-input"),
+progressArea = document.querySelector(".progress-area"),
+uploadedArea = document.querySelector(".uploaded-area");
+
+form.addEventListener("click", () =>{
+  fileInput.click();
+});
+
+fileInput.onchange = ({target})=>{
+  let file = target.files[0];
+  if(file){
+    let fileName = file.name;
+    if(fileName.length >= 12){
+      let splitName = fileName.split('.');
+      fileName = splitName[0].substring(0, 13) + "... ." + splitName[1];
+    }
+    uploadFile(fileName);
+  }
+}
+
+function uploadFile(name){
+  let xhr = new XMLHttpRequest();
+  xhr.open("POST", "php/upload.php");
+  xhr.upload.addEventListener("progress", ({loaded, total}) =>{
+    let fileLoaded = Math.floor((loaded / total) * 100);
+    let fileTotal = Math.floor(total / 1000);
+    let fileSize;
+    (fileTotal < 1024) ? fileSize = fileTotal + " KB" : fileSize = (loaded / (1024*1024)).toFixed(2) + " MB";
+    let progressHTML = `<li class="row">
+                          <i class="fas fa-file-alt"></i>
+                          <div class="content">
+                            <div class="details">
+                              <span class="name">${name} • Uploading</span>
+                              <span class="percent">${fileLoaded}%</span>
+                            </div>
+                            <div class="progress-bar">
+                              <div class="progress" style="width: ${fileLoaded}%"></div>
+                            </div>
+                          </div>
+                        </li>`;
+    uploadedArea.classList.add("onprogress");
+    progressArea.innerHTML = progressHTML;
+    if(loaded == total){
+      progressArea.innerHTML = "";
+      let uploadedHTML = `<li class="row">
+                            <div class="content upload">
+                              <i class="fas fa-file-alt"></i>
+                              <div class="details">
+                                <span class="name">${name} • Uploaded</span>
+                                <span class="size">${fileSize}</span>
+                              </div>
+                            </div>
+                            <i class="fas fa-check"></i>
+                          </li>`;
+      uploadedArea.classList.remove("onprogress");
+      uploadedArea.insertAdjacentHTML("afterbegin", uploadedHTML);
+    }
+  });
+  let data = new FormData(form);
+  xhr.send(data);
+}
+      </script>
+
+
+
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" required />
+        </div>
+
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address" required />
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Re-enter password" required />
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="input-box">
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required />
+          </div>
+        </div>
+
+        <div class="input-box address">
+          <label>Year of Graduation</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>-None-</script></option>
+                <option><script type="text/javascript">document.write( new Date().getFullYear() );</script></option>
+                <option>2022</option>
+                <option>2021</option>
+                <option>2020</option>
+                <option>2019</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box address">
+          <label>Gender</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>-None-</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box address">
+          <label>Experience</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>-None-</option>
+                <option>Fresher</option>
+                <option>0-1 Years</option>
+                <option>1-2 Years</option>
+                <option>2-3 Year</option>
+                <option>3-4 Years</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box address">
+          <label>Current CTC (In lakhs per annum)</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>-None-</option>
+                <option>Not Applicable</option>
+                <option>1-3</option>
+                <option>3-5</option>
+                <option>5-7</option>
+                <option>7-9</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box address">
+          <label>Expected CTC (In lakhs per annum)</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>-None-</option>
+                <option>Open</option>
+                <option>3-5</option>
+                <option>5-7</option>
+                <option>7-9</option>
+                <option>9-10</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box address">
+          <label>Notice Period</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>-None-</option>
+                <option>immediate</option>
+                <option>Not Applicable</option>
+                <option>1 Month</option>
+                <option>2 Months</option>
+                <option>4 Months</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-box">
+          <label>Skillset</label>
+          <input type="text" placeholder="Java, Python, html, css, javascript" required />
+        </div>
+
+        <div class="input-box address">
+          <label>Job</label>
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Job Vacancy</option>
+                <option>Android developer</option>
+                <option>Flutter developer</option>
+                <option>Backend developer</option>
+                <option>Web developer</option>
+                <option>UI/UX designer</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter street address" required />
+          <input type="text" placeholder="Enter street address line 2" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Country</option>
+                <option>India</option>
+                <option>America</option>
+                <option>Japan</option>
+                <option>Nepal</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Enter your city" required />
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Enter your region" required />
+            <input type="number" placeholder="Enter postal code" required />
+          </div>
+        </div>
+
+
+        <button>Submit</button>
+      </form>
+    </section>
+    
+
+
+    <footer>
+      <div class="content">
+        <div class="top">
+          <div class="logo-details">
+            <span class="logo_name"><img src="logo3.png" style="height: 35px;width: 35px;"/> Gcs Recruit</span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-details">
+        <div class="bottom_text">
+          <span class="copyright_text">Copyright &#169; 2023 <a href="#">Garuda Consultancy Service.</a>All rights reserved</span>
+          <span class="policy_terms">
+            <a href="#">Privacy policy</a>
+            <a href="#">Terms & condition</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+
+
+
+  </body>
+</html>

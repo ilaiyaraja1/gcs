@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="home/img/logo3.png">
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css"> 
+        <title>Garuda Consultancy Services: Driving Innovation and Building on Belief</title>
+        <link rel="icon" type="image/x-icon" href="images/logo3.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script> <!-- popup message-->
+        
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3; 
+            border-top: 16px solid #224162;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Hide the loader by default */
+        .loader-container {
+            display: none;
+        }
+    </style>
+
+    </head>
+
+    <body>
+
+ <!-- Loader container -->
+ <div class="center loader-container">
+    <div class="loader"></div>
+</div>
+
+        <!--=============== HEADER ===============-->
+        <header class="header">
+            <nav class="nav container">
+                <div class="nav__data">
+                    <a href="#" class="nav__logo">
+                        <img src="images/logo3.png" style="height: 40px;width: 40px;"/><h1>GCS</h1>
+                    </a>
+    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line nav__toggle-menu"></i>
+                        <i class="ri-close-line nav__toggle-close"></i>
+                    </div>
+                </div>
+
+                <!--=============== NAV MENU ===============-->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="#" class="nav__link">Home</a>
+                        </li>
+
+                        <!--=============== DROPDOWN 1 ===============-->
+                        <li class="dropdown__item">                      
+                            <div class="nav__link dropdown__button">
+                                Discover <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-flashlight-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Most viewed service</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Website for startup</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Advanced Applications</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Advanced technologies</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Advanced AI</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-heart-3-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Popular</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Development with Android studio</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Development with Flutter</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Web development with React</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Backend development expert</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-book-mark-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Careers</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Web development</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Applications development</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">UI/UX design</a>
+                                            <li>
+                                                <a href="Careers/apply.html" class="dropdown__link">Apply</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-file-paper-2-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Special Offers</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Free Domain</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Free Web Hosting</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Free certifications</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Free SSL Certificate</a>
+                                            </li>
+                                            <li>
+                                                <a href="specialoffers.html" class="dropdown__link">Order now</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--=============== DROPDOWN 2 ===============-->
+                        <li class="dropdown__item">
+                            <div class="nav__link dropdown__button">
+                                Resources <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-code-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Web templates</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Free templates</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Premium templates</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-pen-nib-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Designs</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Web designs</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">App designs</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Component design</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-apps-2-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Others</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Recent blogs</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Tutorial videos</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Webinar</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href="#contact" class="nav__link">Contact Us</a>
+                        </li>
+
+                        <!--=============== DROPDOWN 3 ===============-->
+                        <li class="dropdown__item">                        
+                            <div class="nav__link dropdown__button">
+                                Company <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                            </div>
+
+                            <div class="dropdown__container">
+                                <div class="dropdown__content">
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-community-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">About us</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#skills" class="dropdown__link">About us</a>
+                                            </li>
+                                            <li>
+                                                <a href="#contact" class="dropdown__link">Support</a>
+                                            </li>
+                                            <li>
+                                                <a href="#contact" class="dropdown__link">Contact us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+    
+                                    <div class="dropdown__group">
+                                        <div class="dropdown__icon">
+                                            <i class="ri-shield-line"></i>
+                                        </div>
+    
+                                        <span class="dropdown__title">Safety and quality</span>
+    
+                                        <ul class="dropdown__list">
+                                            <li>
+                                                <a href="#" class="dropdown__link">Cookie settings</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="dropdown__link">Privacy Policy</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <div class="scroll-up-btn">
+            <i class="fas fa-angle-up"></i>
+        </div>
+
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="img/p1.jpg" alt="">
+                <div class="title"><h3>Innovation is our DNA, Creating Tomorrow's World Today</h3></div>
+            </div>
+            <div class="item">
+                <img src="img/p4.jpg" alt="">
+                <div class="title"><h3>We Don't Follow Trends</h3><h5>We Set Them: Your Vision, Our Mission</h5></div>
+            </div>
+            <div class="item">
+                <img src="img/p3.jpg" alt="">
+                <div class="title"><h3>AI and Robots </h3><h5>the Future of Automation</h5></h3></div>
+            </div>
+            <div class="item">
+                <img src="img/p5.jpg" alt="">
+                <div class="title"><h3>Your Digital Transformation Partner</h3></div>
+            </div>
+            <div class="item">
+                <img src="img/p6.jpg" alt="">
+                <div class="title"><h3>Your Success</h3><h5>Navigating the Business Landscape</h5></div>
+            </div>
+            <div class="item">
+                <img src="img/p7.jpg" alt="">
+                <div class="title"><h3>Collaboration for transformation</h3></div>
+            </div>
+            <div class="item">
+                <img src="img/p8.jpg" alt="">
+                <div class="title"><h3>GCS Survey: The future of operations</h3>
+                    <h5>Cognitive operations to improve business performance</h5></div>
+            </div>
+            <div class="item">
+                <img src="img/p2.jpg" alt="">
+                <div class="title"><h3>Recognize risks, realize rewards</h3></div>
+            </div>
+            <div class="item">
+                <img src="img/p9.jpg" alt="">
+                <div class="title"><h3>Solving Complex Challenges</h3><h5>Your Software Solutions Experts</h5></div>
+            </div>
+
+
+
+
+        </div>
+        <div class="buttons">
+            <button id="prev"> <i class="fa fa-chevron-left" style="font-size:28px"></i>  </button>
+            <button id="next"> <i class="fa fa-chevron-right" style="font-size:28px"></i> </button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <!-- home section end-->
+    
+        <!-- about section start -->
+        <section class="about" id="about" style="margin-top: 5px;">
+            <div class="max-width">
+                <h2 class="title">We build greater futures through innovation and collective knowledge</h2>
+                <div class="about-content">
+                    <div class="column left">
+                        <img src="images/woner.png" alt="">
+                    </div>
+                    <div class="column right">
+                        <div class="text">I'm Ilaiyaraja and I'm a<span class="typing"></span> <span class="typing-2"></span></div>
+                        <p>Garuda Consultancy Services is an IT services, consulting and business solutions organization.
+                            We believe innovation and collective knowledge can transform all our futures with greater purpose.
+                            Our expert, committed team put our shared beliefs into action every day.
+                             Together, we combine innovation and collective knowledge to create the extraordinary.</p>
+                        <a href="specialoffers.html">Special Offers</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- services section start -->
+        <section class="services" id="services">
+            <div class="max-width">
+                <h2 class="title">Industries we serve</h2>
+                <div class="serv-content">
+                    <div class="card" >
+                        <div class="box">
+                            <i class="fas fa-paint-brush"></i> 
+                            <div class="text">Web Design</div>
+                            <p>Incorporate the best website designs using high-end User Interaction technologies. 
+                                Launch your own global identity with our experts, who carry great expertise in 
+                                 web design from scratch to end.</p>
+                            </p>
+                        </div>
+                    </div>
+    
+    
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-duotone fa-tv"></i> 
+                            <div class="text">Advertising</div>
+                            <p>Our clients are our priority & we are active across all communication channels to provide full customer support.
+                                Any problem in services like website designing and e-commerce development.</p>
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="box">
+                            <i class="fas fa-solid fa-mobile"></i>
+                            <div class="text">Apps Development</div>
+                            <p> We Offer Mobile App Development Service To Build Scalable & Highly Functional Mobile Apps,
+                                Our experts at Gcs aim to provide innovative web and mobile app solutions with the utmost client satisfaction.
+                            </p>
+                        </div>
+                    </div>
+    
+                   <div class="card">
+                        <div class="box">
+                            <i class="fa-brands fa-uikit"></i>
+                            <div class="text">ui/ux design</div>
+                            <p>We are the best web design company in India with highly experienced coders.
+                                 our potential to deliver top-notch websites is commendable. We focus on demanding technologies, frameworks,
+                                  and tools.</p>
+                        </p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="box">
+                            <i class="fa-brands fa-drupal"></i>
+                            <div class="text">Logo Designs</div>
+                            <p>Our logo design service is for multiple industries, such as real estate, education, financial institutions,
+                                 food, hospitality, information technology, fashion, and more. We also provide custom logo design services.</p>
+                        </p>
+                        </div>
+                    </div>
+    
+                    <div class="card">
+                        <div class="box">
+                            <i class="fa-brands fa-medium"></i>
+                            <div class="text">Responsive Websites</div>
+                            <p>Website responsiveness is a very critical parameter for the success of your business venture.
+                                 Responsive web design provides solutions by making websites and applications smart enough.
+                                 your business gets a complete development team.</p>
+                        </p>
+                        </div>
+                    </div>
+    
+                   </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- skills section start -->
+        <section class="skills" id="skills">
+            <div class="max-width">
+                <h2 class="title">A top web development company in india</h2>
+                <div class="skills-content">
+                    <div class="column left">
+                        <div class="text">About us</div>
+                        <p>100% Trusted and Registered Company in India with a professional website that provides the best web development 
+                            and web design services in India. We are a company that offers multi-functional web portals,
+                             and we make sure that a well-developed and attractive website can help our clients to record
+                              ROI-driven results.</p>
+                        <a href="#contact">Join us</a>
+                    </div>
+                    <div class="column right">
+                       <img src="images/company.jpg" style="height: 100%; width: 100%;border-radius: 8px;"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- teams section start -->
+        <section class="teams" id="teams">
+        <div class="max-width">
+            <h2 class="title">Our professional teams</h2>
+            <div class="carousel owl-carousel">
+                <div class="card" >
+                    <div class="box">
+                        <img src="images/em.jpg" alt="">
+                        <div class="text">Needham</div>
+                        <p>Under the direction of an IT leader, there are various functional groups that handle day-to-day operations
+                            </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/pro2.jpg" alt="">
+                        <div class="text">Shreya</div>
+                        <p>IT architecture teams determine how IT services, solutions, and infrastructure should be built</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/Brown.png" alt="">
+                        <div class="text">Brown</div>
+                        <p>Mr.Brown is responsible for overseeing functional areas of the department</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/Williams.jpeg" alt="">
+                        <div class="text">Williams</div>
+                        <p>Database administrators are responsible for maintaining & protecting an organization's data</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/em1.jpg" alt="">
+                        <div class="text">Emma</div>
+                        <p>Every page & every step a user will experience in their interaction with the finished product</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <!-- team end-->
+    
+        <!-- contact section start -->
+        <section class="contact" id="contact">
+            <div class="max-width">
+                <h2 class="title">Contact me</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <div class="text">Garuda Consultancy Services</div>
+                        <p>Gcs is a digital branding & web development company. Garuda Consultancy Services For Business founded in Jun, 2023. We do believe Innovation would be key to drive Transformation.</p>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Ilaiyaraaja</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="head">Address</div>
+                                    <div class="sub-title">Gcs, No: 05, Lakshmi Puram, Velachery, Chennai, Tamil Nadu 600042.</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">ilaiyaraaja.mca@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <div class="text">Message me</div>
+                        <form id="myForm" action="https://formspree.io/f/mknlyveb" method="POST">
+                            <div class="fields">
+                                <div class="field name">
+                                    <input type="text" name="name" placeholder="Name" required>
+                                </div>
+                                <div class="field email">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                </div>
+                            </div>
+    
+                            <div class="field">
+                                <input type="number" name="phone"
+                                
+                                
+                                pattern="\d{10}"
+                                title="Ten numbers"
+                                autocomplete="off"
+                                
+                                placeholder="+91 Phone no" required>
+                            </div>
+    
+                            <div class="field">
+                                <input type="text" name="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="field textarea">
+                                <textarea cols="30" rows="10" name="message"  placeholder="Message.." required></textarea>
+                            </div>
+                            <div class="button-area">
+                                <button type="submit">Send message</button>
+                            </div>
+                            <p id="my-form-status" style="padding-left: 21px;color:rgb(22, 151, 24)"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contack section end -->
+
+
+        <!--our clients-->
+        <section class="teams" id="teams">
+    <div class="max-width">
+<div class="our-clients">
+    <ul>
+      <li> <img src="images/companies/gc1.png" alt=""> <img src="images/companies/gc1.png" alt=""> </li>
+      <li> <img src="images/companies/gc2.svg" alt=""> <img src="images/companies/gc2.svg" alt=""> </li>
+      <li> <img src="images/companies/gc3.png" alt=""> <img src="images/companies/gc3.png" alt=""> </li>
+      <li> <img src="images/companies/gc4.jpg" alt=""> <img src="images/companies/gc4.jpg" alt=""> </li>
+      <li> <img src="images/companies/gc5.jpeg" alt=""> <img src="images/companies/gc5.jpeg" alt=""> </li>
+      <li> <img src="images/companies/gc7.png" alt=""> <img src="images/companies/gc7.png" alt=""> </li>
+      <li> <img src="images/companies/gc8.svg" alt=""> <img src="images/companies/gc8.svg" alt=""> </li>
+      <li> <img src="images/companies/gc9.png" alt=""> <img src="images/companies/gc9.png" alt=""> </li>
+    </ul>
+  </div>
+    </div>
+        </section>
+        <!--our clients section end-->
+
+        <!--Faq start-->
+        <div class="faqs-container">
+            <h2>Corporate Profile</h2>
+
+    <div class="questions-container">
+
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>What is GCS' area of operations?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            Garuda Consultancy Services is an IT services, consulting and business solutions organization that has 
+            been partnering with many of the world’s largest businesses in their transformation journeys for the 
+            last three years. Gcs offers a consulting-led, cognitive powered, integrated portfolio of IT, 
+            business & technology services, and engineering. This is delivered through its unique location 
+            independent agile delivery model, recognized as a benchmark of excellence in software development.
+          </p>
+
+          <p>
+            The company has domain expertise in a broad set of industries, comprising Banking, Financial Services and 
+            Insurance, Retail and CPG, Communication & Media, Manufacturing, Life Sciences & Healthcare, Energy &
+             Utilities, Travel & Hospitality, Technology & Services and others.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>When was Gcs founded?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            GCS was established in 2023 as a division of Garuda Sons Limited. Gcs was corporatized into a separate 
+            company with effect from 1st Jun 2023. Following a hugely successful IPO in Jun 2023, it was listed on 
+            the NSE and BSE on August 25, 2023.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>Where can i find GCS' Investor Relations Presentation?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            You can find the GCS' Investor Relations Presentation in the "Management Commentary" section of the 
+            Investor page on our website. You can also download it by clicking here.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>How do i buy Gcs' shares?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            GCS’ shares can be purchased on the open market in India through either a stock broker or any financial institution that provides brokerage services at the BSE or NSE. TCS does not offer a direct stock purchase plan.
+          </p>
+        </div>
+      </div>
+
+      <div class="content-container">
+        <div class="faq-header">
+          <h3>When did GCS have its initial public offer (IPO)?</h3>
+          <span class="open active">+</span>
+          <span class="close">-</span>
+        </div>
+
+        <div class="content">
+          <p>
+            GCS made an initial public offer in Jun 2023 and its shares were listed on the Bombay Stock Exchange (BSE) 
+            and the National Stock Exchange (NSE) in India on August 25, 2023. The shares of the Company were issued at 
+            a face value of Re 1 per share and a share premium of Rs 849 per share. There has been no follow-on 
+            offering from the Company.
+          </p>
+        </div>
+      </div>
+
+    </div>
+        </div>
+        <!--Faq end-->
+
+        <!-- footer section start -->
+        <footer>
+            <div class="content">
+              <div class="top">
+                <div class="logo-details">
+                  <span class="logo_name"><img src="images/logo3.png" style="height: 35px;width: 35px;"/> Gcs</span>
+                </div>
+
+              <div class="media-icons">
+
+                  <a href="https://wa.me/6374244439?text=Hello GCS. I need a service from your company ..."><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+                  <a href="https://www.youtube.com/c/Rajmeetamil"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                </div>
+              </div>
+              <div class="link-boxes">
+                <ul class="box">
+                  <li class="link_namee">Company</li>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">professionales</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Get started</a></li>
+                </ul>
+                <ul class="box">
+                  <li class="link_namee">Services</li>
+                  <li><a href="#">App design</a></li>
+                  <li><a href="#">Web design</a></li>
+                  <li><a href="#">AWS Cloud</a></li>
+                  <li><a href="#">Logo design</a></li>
+                  <li><a href="#">Banner design</a></li>
+                  <li><a href="#">Sustainability Services</a></li>
+                </ul>
+
+
+
+                <ul class="box">
+                  <li class="link_namee">Careers</li>
+                  <li><a href="#">Join with us</a></li>
+                  <li><a href="#">Web development</a></li>
+                  <li><a href="#">Applications development</a></li>
+                  <li><a href="#">UI/UX design</a></li>
+                  <li><a href="#">Informatic security</a></li>
+                </ul>
+                <ul class="box">
+                  <li class="link_namee">Safety and quality</li>
+                  <li><a href="#">Cookie settings</a></li>
+                  <li><a href="#">Privacy policy</a></li>
+                  <li><a href="#">Free customer support</a></li>
+                  <li><a href="#">Premium templates</a></li>
+                  <li><a href="#">Quality product</a></li>
+                </ul>
+
+                <ul class="box input-box">
+                  <li class="link_namee">Industries</li>
+                  <li><a href="#">Cloud</a></li>
+                  <li><a href="#">Consulting</a></li>
+                  <li><a href="#">Cybersecurity</a></li>
+                  <li><a href="#">Data & Analytics</Datag></a></li>
+                  <li><a href="#">Enterprise solutions</a></li>
+                </ul>
+
+              </div>
+            </div>
+            <div class="bottom-details">
+              <div class="bottom_text">
+                <span class="copyright_text">Copyright &#169; 2023 <a href="#">Garuda Consultancy Service.</a>All rights reserved</span>
+                <span class="policy_terms">
+                  <a href="#">Privacy policy</a>
+                  <a href="#">Terms & condition</a>
+                </span>
+              </div>
+            </div>
+          </footer>
+        <!-- footer seection end -->
+
+<!-- success message -->
+        <script>
+            function fireSweetAlert() {
+                Swal.fire(
+                    'Thank You!',
+                    'Your details has been successfully submitted',
+                    'Thanks'
+                )
+            }
+        
+          </script>
+<!-- success message end -->
+<!-- success faq -->
+<script>
+    const faqHeaders = document.querySelectorAll(".faqs-container .faq-header");
+
+faqHeaders.forEach((header, i) => {
+  header.addEventListener("click", () => {
+    header.nextElementSibling.classList.toggle("active");
+
+    const open = header.querySelector(".open");
+    const close = header.querySelector(".close");
+
+    if (header.nextElementSibling.classList.contains("active")) {
+      open.classList.remove("active");
+      close.classList.add("active");
+    } else {
+      open.classList.add("active");
+      close.classList.remove("active");
+    }
+  });
+});
+</script>
+<!-- success faq end -->
+
+<script src="script.js"></script>
+
+<!-- success top slider -->
+<script>
+    let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
+
+
+let lengthItems = items.length - 1;
+let active = 0;
+next.onclick = function(){
+    active = active + 1 <= lengthItems ? active + 1 : 0;
+    reloadSlider();
+}
+prev.onclick = function(){
+    active = active - 1 >= 0 ? active - 1 : lengthItems;
+    reloadSlider();
+}
+let refreshInterval = setInterval(()=> {next.click()}, 3000);
+function reloadSlider(){
+    slider.style.left = -items[active].offsetLeft + 'px';
+    // 
+    let last_active_dot = document.querySelector('.slider .dots li.active');
+    last_active_dot.classList.remove('active');
+    dots[active].classList.add('active');
+
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(()=> {next.click()}, 3000);
+
+    
+}
+
+dots.forEach((li, key) => {
+    li.addEventListener('click', ()=>{
+         active = key;
+         reloadSlider();
+    })
+})
+window.onresize = function(event) {
+    reloadSlider();
+};
+
+
+</script>
+<!-- success slider end -->
+
+<!-- success form -->
+<script>
+    // Get a reference to the form and the status element
+    const myForm = document.getElementById('myForm');
+    const status = document.getElementById('my-form-status');
+
+    // Add a submit event listener to the form
+    myForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Prevent the default form submission
+
+        // Fetch the form submission URL and method from the form's action and method attributes
+        const url = myForm.action;
+        const method = myForm.method;
+
+        // Create a FormData object from the form
+        const formData = new FormData(myForm);
+
+        // Send a POST request to the form submission URL with the form data
+        try {
+            await fetch(url, {
+                method: method,
+                body: formData,
+            });
+ // An error occurred while submitting the form
+ status.textContent = 'An error occurred while submitting the form';
+            status.style.color = 'red';
+          
+        } catch (error) {
+             // Form submission was successful
+             fireSweetAlert(); // You can display a success message or alert here
+            status.textContent = 'Form submitted successfully';
+            status.style.color = 'rgb(22, 151, 24)';
+            myForm.reset(); // Clear the form fields
+        }
+    });
+</script>
+<!-- success form end -->
+
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAzd7GDGUFCjFGAx_tMBfBQs9C7jzrgWpM",
+      authDomain: "garuda-7d954.firebaseapp.com",
+      projectId: "garuda-7d954",
+      storageBucket: "garuda-7d954.appspot.com",
+      messagingSenderId: "401518515703",
+      appId: "1:401518515703:web:aaad8267bc9f1df76e8af2",
+      measurementId: "G-PXT3ZT5QRD"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+  
+
+
+  <script>
+    // Function to show the loader
+    function showLoader() {
+        document.querySelector('.loader-container').style.display = 'flex';
+    }
+
+    // Function to hide the loader
+    function hideLoader() {
+        document.querySelector('.loader-container').style.display = 'none';
+    }
+
+    // Show the loader when the page starts loading
+    showLoader();
+
+    // Hide the loader when the page has finished loading
+    window.addEventListener('load', hideLoader);
+</script>
+
+</body>
+</html>
